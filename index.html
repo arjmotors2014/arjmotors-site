@@ -65,8 +65,19 @@ nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
 @media (max-width:860px){.row nav.tabs{display:none}}
 
 /* hero */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero .emblem{position:absolute;left:4%;top:50%;transform:translateY(-50%);height:88%;width:auto;opacity:.12;pointer-events:none}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:#000}
+/* showroom light + slow smoke (CSS only, no photo) */
+.hero .spot{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse 38% 55% at 50% -8%,rgba(220,235,255,.22),transparent 70%),
+  radial-gradient(ellipse 70% 22% at 50% 100%,rgba(0,120,214,.22),transparent 75%)}
+.hero .smoke{position:absolute;left:-20%;right:-20%;bottom:-10%;height:70%;pointer-events:none;filter:blur(40px);opacity:.55}
+.hero .smoke i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(170,180,195,.35),transparent 65%)}
+.hero .smoke i:nth-child(1){width:55%;height:70%;left:5%;bottom:0;animation:drift1 26s ease-in-out infinite alternate}
+.hero .smoke i:nth-child(2){width:50%;height:60%;right:5%;bottom:5%;animation:drift2 32s ease-in-out infinite alternate}
+.hero .smoke i:nth-child(3){width:40%;height:45%;left:30%;bottom:-5%;background:radial-gradient(circle,rgba(92,184,233,.22),transparent 65%);animation:drift1 38s ease-in-out infinite alternate-reverse}
+@keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(8%,-6%) scale(1.15)}}
+@keyframes drift2{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-10%,-4%) scale(.95)}}
+@media (prefers-reduced-motion:reduce){.hero .smoke i{animation:none}}
 .hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:56px 24px 40px}
 .hero .logo{height:clamp(110px,15vw,180px);width:auto}
 .slogan-en{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.6vw,30px);letter-spacing:.22em}
@@ -204,7 +215,8 @@ footer b{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:
 <main id="top">
 
 <section class="hero">
-<img class="emblem" src="img/emblem.png" alt="">
+<div class="spot" aria-hidden="true"></div>
+<div class="smoke" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="inner">
 <img class="logo" src="img/logo.png" alt="לוגו ARJ Motors">
 <div class="slogan-en" dir="ltr">YOUR RIGHT CHOICE</div>

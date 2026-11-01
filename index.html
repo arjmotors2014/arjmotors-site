@@ -178,8 +178,15 @@ nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
 @media (max-width:560px){#lead{grid-template-columns:1fr}}
 
 footer{border-top:1px solid var(--line);color:#8a8a8a}
-footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;padding-top:28px;padding-bottom:100px;font-size:14px}
-footer b{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:4px;color:#fff}
+footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding-top:48px;padding-bottom:110px}
+footer .f-mark{height:44px;width:auto;margin-bottom:6px}
+footer .f-name{font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:.3em;margin-left:-.3em;color:#fff}
+footer .f-he{font-size:13px;color:#8a8a8a}
+footer .f-rule{width:40px;height:1px;background:var(--blue);margin:10px 0 6px}
+footer .f-slogan{font-family:var(--serif);font-size:14px;letter-spacing:.35em;margin-left:-.35em;color:#9a9a9a}
+footer .f-bottom{width:100%;margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:13px}
+footer .f-bottom a{color:#8a8a8a;text-decoration:none}
+@media (max-width:640px){footer .f-bottom{flex-direction:column;align-items:center}}
 .wa-float{position:fixed;left:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.5);z-index:30}
 </style>
 </head>
@@ -359,12 +366,15 @@ footer b{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:
 
 <footer>
 <div class="wrap">
-<b>ARJ MOTORS</b>
-<span>איי.אר.ג'יי מוטורס</span>
-<span class="en" style="letter-spacing:.2em">YOUR RIGHT CHOICE</span>
-<span style="flex:1"></span>
-<span dir="ltr">arjmotors.com</span>
-<span style="flex-basis:100%;font-size:13px;color:#8a8a8a">© כל הזכויות שמורות לאיי.אר.ג'יי מוטורס 2014 בע״מ</span>
+<img class="f-mark" src="img/emblem.png" alt="">
+<div class="f-name" dir="ltr">ARJ MOTORS</div>
+<div class="f-he">איי.אר.ג'יי מוטורס</div>
+<div class="f-rule" aria-hidden="true"></div>
+<div class="f-slogan" dir="ltr">YOUR RIGHT CHOICE</div>
+<div class="f-bottom">
+<span>© כל הזכויות שמורות לאיי.אר.ג'יי מוטורס 2014 בע״מ</span>
+<a href="https://www.arjmotors.com" dir="ltr">arjmotors.com</a>
+</div>
 </div>
 </footer>
 

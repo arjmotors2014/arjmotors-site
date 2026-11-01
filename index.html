@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ARJ Motors | מכירה, טרייד-אין וייבוא רכבים – חולון, ירושלים, ראשון לציון</title>
-<meta name="description" content="ARJ Motors – מכירה, טרייד-אין וייבוא של רכבי יוקרה ורכבים יד שנייה איכותיים. 3 סניפים: חולון, ירושלים וראשון לציון.">
-<meta property="og:title" content="ARJ Motors – הרכב הנכון, השירות הנכון, במקום אחד">
+<meta name="description" content="ARJ Motors – מכירה, טרייד-אין וייבוא של רכבי יוקרה ורכבים יד שנייה איכותיים. חיפוש רכב במלאי. 3 סניפים: חולון, ירושלים וראשון לציון.">
+<meta property="og:title" content="ARJ Motors – Your Right Choice">
 <meta property="og:description" content="ARJ Motors – מכירה, טרייד-אין וייבוא של רכבי יוקרה ורכבים יד שנייה איכותיים. 3 סניפים: חולון, ירושלים וראשון לציון.">
 <meta property="og:image" content="https://arjmotors.com/img/og.png">
 <meta property="og:url" content="https://arjmotors.com/">
@@ -13,218 +13,446 @@
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Frank+Ruhl+Libre:wght@400;500;700&amp;family=Heebo:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Frank+Ruhl+Libre:wght@400;500&amp;family=Heebo:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoDealer", "name": "ARJ Motors", "alternateName": "איי.אר.ג'יי מוטורס", "slogan": "Your Right Choice", "foundingDate": "1986", "url": "https://arjmotors.com", "telephone": "+972-3-7788223", "email": "info@arjmotors.com", "address": [{"@type": "PostalAddress", "streetAddress": "הבנאי 32", "addressLocality": "חולון", "addressCountry": "IL"}, {"@type": "PostalAddress", "streetAddress": "האלוף יקותיאל אדם 1", "addressLocality": "ירושלים", "addressCountry": "IL"}, {"@type": "PostalAddress", "streetAddress": "עליית הנוער 8", "addressLocality": "ראשון לציון", "addressCountry": "IL"}]}</script>
 <style>
-body{margin:0;background:#000000}
-a{color:#FFFFFF}a:hover{color:#BFD9FF}
+:root{
+  --bg:#000000; --bg-2:#0b0b0b; --card:#111214; --line:#1f1f1f; --line-2:#2c2f35;
+  --ink:#ffffff; --ink-2:#d0d0d0; --muted:#9a9a9a;
+  --blue:#0078d6; --blue-soft:#5cb8e9;
+  --serif:'Cormorant Garamond','Frank Ruhl Libre',Georgia,serif;
+  --sans:'Heebo',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section{scroll-margin-top:120px}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400}
+img{max-width:100%;display:block}
+a{color:var(--ink)}a:hover{color:#bfd9ff}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.en{font-family:var(--serif)}
+h2.title{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,44px)}
+.section{border-top:1px solid var(--line);padding:72px 0}
+.section.alt{background:var(--bg-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font:inherit;font-weight:500;font-size:16px;text-decoration:none;cursor:pointer;border:0}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.light{background:#fff;color:#000}
+.btn.ghost{background:transparent;color:#fff;border:1px solid #6e6e6e}
+
+/* header */
+header.top{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.92);backdrop-filter:saturate(1.2) blur(6px);-webkit-backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
+.top .row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand img{height:46px;width:auto}
+.brand b{font-family:var(--serif);font-weight:500;font-size:24px;letter-spacing:4px;line-height:1.1}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.3px}
+.phone{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#fff;font-size:15px;min-height:44px}
+nav.tabs{display:flex;gap:4px}
+nav.tabs a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;color:#c4c8ce;text-decoration:none;font-size:15px;border-bottom:2px solid transparent}
+nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
+@media (max-width:860px){
+  .top .row{min-height:64px}
+  .brand img{height:38px}.brand b{font-size:19px;letter-spacing:3px}
+  .top nav.tabs{order:3}
+  .tabs-row{border-top:1px solid var(--line)}
+  nav.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+  nav.tabs a{padding:0 4px;font-size:14px}
+  .phone .num{font-size:14px}
+}
+@media (min-width:861px){.tabs-row{display:none}}
+@media (max-width:860px){.row nav.tabs{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero .emblem{position:absolute;left:4%;top:50%;transform:translateY(-50%);height:88%;width:auto;opacity:.12;pointer-events:none}
+.hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:56px 24px 40px}
+.hero .logo{height:clamp(110px,15vw,180px);width:auto}
+.slogan-en{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.6vw,30px);letter-spacing:.22em}
+.slogan-he{font-size:16px;color:#c4c8ce;margin-top:-6px}
+.tagl{font-family:var(--serif);font-size:clamp(14px,1.6vw,18px);letter-spacing:.3em;color:#c4c8ce}
+.hero .rule{width:120px;height:2px;background:var(--blue)}
+.hero h1{margin:4px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(28px,4.6vw,56px);line-height:1.15}
+.hero .cities{font-size:13px;letter-spacing:.2em;color:var(--muted)}
+
+/* search */
+.search{max-width:860px;margin:8px auto 0;border:1px solid var(--line-2);border-radius:12px;padding:20px;background:rgba(10,11,13,.85);display:grid;grid-template-columns:2fr 1fr auto;gap:12px;align-items:end;text-align:right}
+.search .lbl{display:block;font-size:12px;letter-spacing:.15em;color:var(--muted);margin-bottom:6px}
+.search input,.search select{width:100%;height:52px;border:1px solid var(--line-2);border-radius:10px;background:#000;color:#fff;padding:0 14px;font:inherit;font-size:16px}
+.search .go{height:52px;padding:0 28px}
+.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:14px;color:#c4c8ce;background:transparent;border:1px solid var(--line-2);border-radius:999px;min-height:40px;padding:0 16px;cursor:pointer}
+.chip[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+@media (max-width:700px){.search{grid-template-columns:1fr}.search .go{width:100%}}
+
+/* stock */
+.stock-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;border-bottom:1px solid var(--line-2);padding-bottom:14px;margin-bottom:28px}
+.count{font-size:14px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px}
+.car{display:flex;flex-direction:column;gap:12px}
+.car .ph{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#16181d;display:flex;align-items:center;justify-content:center;color:#3a3e46}
+.car .ph img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;font-size:11px;padding:4px 10px;border-radius:999px}
+.badge.illus{bottom:10px;right:10px;color:#e6e6e6;background:rgba(0,0,0,.65);border:1px solid #3a3e46}
+.badge.pro{top:10px;right:10px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.8);border:1px solid #3a3e46;padding:6px 12px;font-family:var(--serif);font-weight:600;font-size:13px;letter-spacing:.22em;color:#fff}
+.badge.pro i{width:1px;height:13px;background:var(--blue-soft)}
+.car .meta{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.car .name{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.12em;text-transform:uppercase}
+.car .specs{font-size:13px;color:var(--muted);margin-top:4px}
+.car .price{font-size:18px;font-weight:500;color:var(--blue-soft);white-space:nowrap}
+.car .ask{font-size:14px;white-space:nowrap;color:var(--blue-soft);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.empty{border:1px solid var(--line-2);border-radius:12px;padding:40px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.empty p{margin:0;color:var(--ink-2);line-height:1.7;max-width:520px}
+.more{display:flex;justify-content:center;margin-top:32px}
+
+/* pro */
+.pro-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#000;text-align:center}
+.pro-band img{width:100%;max-width:1100px;height:auto;margin:0 auto}
+.pro-band p{margin:0 auto;padding:0 24px 32px;color:#c4c8ce;font-size:16px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.about .txt{display:flex;flex-direction:column;gap:16px}
+.about .lead{margin:0;font-family:var(--serif);font-size:clamp(24px,3vw,34px);line-height:1.3}
+.about p{margin:0;font-size:17px;font-weight:300;line-height:1.85;color:var(--ink-2)}
+.about .sig{font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:.2em;color:#fff}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line-2);border:1px solid var(--line-2)}
+.tile{background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:6px}
+.tile .n{font-family:var(--serif);font-size:16px;color:var(--blue-soft)}
+.tile b{font-weight:500;font-size:17px}
+.tile span{font-size:14px;font-weight:300;color:#b5b5b5;line-height:1.6}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* partners */
+.partners-t{font-size:12px;letter-spacing:.2em;color:var(--muted);text-align:center;margin-bottom:18px}
+.partners{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.partner{min-height:64px;border:1px solid var(--line-2);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:10px;font-size:15px;color:#d0d0d0;text-align:center}
+@media (max-width:700px){.partners{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* branches */
+.branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.branch{border:1px solid var(--line-2);border-radius:10px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.branch h3{margin:0;font-family:var(--serif);font-weight:500;font-size:28px}
+.branch .ln{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink-2);line-height:1.7}
+.branch .ln svg{flex:none;margin-top:3px}
+.branch .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.branch .acts .btn{flex:1 1 120px;min-height:46px;font-size:15px;padding:0 14px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+.contact .info{display:flex;flex-direction:column;gap:12px}
+.contact .info p{margin:0;font-size:17px;font-weight:300;line-height:1.7;color:#b5b5b5}
+.contact .info a{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;min-height:44px;align-self:flex-start}
+#lead{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+#lead label{display:flex;flex-direction:column;gap:8px;font-size:14px;color:#b5b5b5}
+#lead .full{grid-column:1/-1}
+#lead input[type=text],#lead input[type=tel],#lead select,#lead textarea{font:inherit;font-size:16px;color:#fff;background:#000;padding:12px 2px;border:0;border-bottom:1px solid #6e6e6e;min-height:46px}
+#lead textarea{resize:vertical}
+#lead .chk{flex-direction:row;align-items:center;gap:10px;font-size:16px;color:#fff;min-height:44px}
+#lead .chk input{width:20px;height:20px;accent-color:var(--blue)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+@media (max-width:560px){#lead{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);color:#8a8a8a}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;padding-top:28px;padding-bottom:100px;font-size:14px}
+footer b{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:4px;color:#fff}
+.wa-float{position:fixed;left:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.5);z-index:30}
 </style>
-<style>html{scroll-behavior:smooth}*{box-sizing:border-box}img{max-width:100%}input:focus,textarea:focus,select:focus{outline:2px solid #0078D6;outline-offset:2px}@media (max-width:640px){#lead{grid-template-columns:1fr!important}#lead label{grid-column:1/-1}}@media (max-width:640px){.mainnav{display:none!important}.tagl{letter-spacing:3px!important}}</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoDealer", "name": "ARJ Motors", "alternateName": "איי.אר.ג'יי מוטורס", "url": "https://arjmotors.com", "telephone": "+972-3-7788223", "email": "info@arjmotors.com", "address": [{"@type": "PostalAddress", "streetAddress": "הבנאי 32", "addressLocality": "חולון", "addressCountry": "IL"}, {"@type": "PostalAddress", "streetAddress": "האלוף יקותיאל אדם 1", "addressLocality": "ירושלים", "addressCountry": "IL"}, {"@type": "PostalAddress", "streetAddress": "עליית הנוער 8", "addressLocality": "ראשון לציון", "addressCountry": "IL"}]}</script>
 </head>
 <body>
-<div dir="rtl" style="font-family: 'Heebo', sans-serif; font-weight: 400; color: #FFFFFF; background: #000000; min-height: 100vh; position: relative">
 
-<header style="background: #000000; border-bottom: 1px solid #1F1F1F">
-<div style="max-width: 1280px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 36px">
-<a href="#top" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #FFFFFF">
-<img src="img/logo.png" alt="" style="height: 56px; width: auto">
-<span style="display: flex; flex-direction: column; line-height: 1.1"><b style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 27px; letter-spacing: 4px">ARJ MOTORS</b><span style="font-size: 12px; color: #9A9A9A; letter-spacing: 0.3px">איי.אר.ג'יי מוטורס</span></span>
+<header class="top">
+<div class="wrap row">
+<a class="brand" href="#top">
+<img src="img/logo.png" alt="">
+<span><b>ARJ MOTORS</b><small>איי.אר.ג'יי מוטורס</small></span>
 </a>
-<nav class="mainnav" aria-label="תפריט ראשי" style="display: flex; flex-wrap: wrap; gap: 2px 26px; flex: 1 1 380px; font-size: 15px; font-weight: 400">
-<a href="#services" style="color: #FFFFFF; text-decoration: none; padding: 12px 0">שירותים</a>
-<a href="#about" style="color: #FFFFFF; text-decoration: none; padding: 12px 0">אודות</a>
-<a href="#branches" style="color: #FFFFFF; text-decoration: none; padding: 12px 0">סניפים</a>
-<a href="#contact" style="color: #FFFFFF; text-decoration: none; padding: 12px 0">צור קשר</a>
+<nav class="tabs" aria-label="תפריט ראשי">
+<a href="#stock" class="on">מלאי</a>
+<a href="#branches">סניפים</a>
+<a href="#about">אודות</a>
+<a href="#contact">צור קשר</a>
 </nav>
-<a href="tel:037788223" style="display: inline-flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-size: 16px; padding: 10px 0; min-height: 44px; box-sizing: border-box">
+<a class="phone" href="tel:037788223">
+<span class="num" dir="ltr">03-7788223</span>
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-<span dir="ltr">03-7788223</span>
 </a>
+</div>
+<div class="tabs-row">
+<nav class="tabs" aria-label="תפריט ראשי">
+<a href="#stock" class="on">מלאי</a>
+<a href="#branches">סניפים</a>
+<a href="#about">אודות</a>
+<a href="#contact">צור קשר</a>
+</nav>
 </div>
 </header>
 
-<section id="top" style="background: #000000">
-<div style="position: relative; overflow: hidden; height: clamp(340px, 50vw, 600px); background: #000000; border-bottom: 1px solid #1F1F1F; display: flex; align-items: center; justify-content: center">
-<img src="img/emblem.png" alt="" style="position: absolute; left: 6%; top: 50%; transform: translateY(-50%); height: 92%; width: auto; opacity: 0.16">
-<div style="position: absolute; left: 0; right: 0; bottom: 9%; height: 1px; background: #0078D6; opacity: 0.7"></div>
-<div style="position: absolute; right: 8%; bottom: 9%; width: 38%; height: 3px; transform: translateY(1px); background: #0078D6"></div>
-<div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; padding: 0 24px">
-<img src="img/logo.png" alt="לוגו ARJ Motors" style="height: clamp(120px, 18vw, 220px); width: auto">
-<span style="font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 26px); letter-spacing: 8px; color: #D0D0D0" class="tagl">SALES · TRADE-IN · IMPORT</span>
-</div>
-</div>
-<div style="max-width: 1280px; margin: 0 auto; padding: 48px 24px 80px; display: flex; flex-direction: column; gap: 22px">
-<span style="font-size: 14px; letter-spacing: 2px; color: #9A9A9A">חולון · ירושלים · ראשון לציון</span>
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-weight: 400; font-size: clamp(40px, 6vw, 76px); line-height: 1.08">הרכב הנכון,<br>השירות הנכון, במקום אחד.</h1>
-<p style="margin: 0; font-size: 19px; font-weight: 300; line-height: 1.7; color: #C9C9C9; max-width: 620px">מכירה, טרייד-אין וייבוא של רכבי יוקרה ורכבים יד שנייה איכותיים, עם נתונים טובים, היסטוריה מסודרת וסטנדרט גבוה.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; max-width: 560px">
-<a href="https://wa.me/972504497670" style="flex: 1 1 220px; display: inline-flex; align-items: center; justify-content: center; background: #0078D6; color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 17px; padding: 16px 24px; border-radius: 999px; min-height: 52px; box-sizing: border-box">שלחו לנו וואטסאפ</a>
-<a href="#contact" style="flex: 1 1 220px; display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 17px; padding: 16px 24px; border-radius: 999px; border: 1px solid #6E6E6E; min-height: 52px; box-sizing: border-box">תיאום פגישה</a>
-</div>
-</div>
-</section>
+<main id="top">
 
-<section id="services" style="background: #0B0B0B; border-top: 1px solid #1F1F1F">
-<div style="max-width: 1280px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 36px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-weight: 400; font-size: 46px">השירותים שלנו</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #262626; border: 1px solid #262626">
+<section class="hero">
+<img class="emblem" src="img/emblem.png" alt="">
+<div class="inner">
+<img class="logo" src="img/logo.png" alt="לוגו ARJ Motors">
+<div class="slogan-en" dir="ltr">YOUR RIGHT CHOICE</div>
+<div class="slogan-he">הבחירה הנכונה שלך</div>
+<div class="tagl" dir="ltr">SALES · TRADE-IN · IMPORT</div>
+<div class="rule"></div>
+<h1>הרכב הנכון, השירות הנכון, במקום אחד.</h1>
+<div class="cities">חולון · ירושלים · ראשון לציון</div>
 
-<div style="background: #0B0B0B; padding: 30px 26px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 18px; color: #0078D6">01</span>
-<h3 style="margin: 0; font-size: 21px; font-weight: 500">מכירת רכבים</h3>
-<p style="margin: 0; font-size: 16px; font-weight: 300; line-height: 1.65; color: #B5B5B5">רכבי יוקרה ורכבים יד שנייה איכותיים, עם נתונים טובים והיסטוריה מסודרת.</p>
+<form class="search" id="search" role="search" aria-label="חיפוש רכב במלאי">
+<div>
+<label class="lbl" for="q">חיפוש רכב במלאי</label>
+<input id="q" type="search" placeholder="יצרן, דגם או שנה" autocomplete="off">
 </div>
-
-<div style="background: #0B0B0B; padding: 30px 26px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 18px; color: #0078D6">02</span>
-<h3 style="margin: 0; font-size: 21px; font-weight: 500">טרייד-אין</h3>
-<p style="margin: 0; font-size: 16px; font-weight: 300; line-height: 1.65; color: #B5B5B5">מביאים את הרכב הנוכחי, מקבלים הערכה והשווי מקוזז מהרכב החדש.</p>
+<div>
+<label class="lbl" for="maxp">מחיר עד</label>
+<select id="maxp">
+<option value="">ללא הגבלה</option>
+<option value="50000">₪ 50,000</option>
+<option value="80000">₪ 80,000</option>
+<option value="100000">₪ 100,000</option>
+<option value="150000">₪ 150,000</option>
+<option value="200000">₪ 200,000</option>
+<option value="300000">₪ 300,000</option>
+</select>
 </div>
-
-<div style="background: #0B0B0B; padding: 30px 26px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 18px; color: #0078D6">03</span>
-<h3 style="margin: 0; font-size: 21px; font-weight: 500">ייבוא רכבים</h3>
-<p style="margin: 0; font-size: 16px; font-weight: 300; line-height: 1.65; color: #B5B5B5">ייבוא רכבי יוקרה בסטנדרט גבוה, לפי בקשה.</p>
-</div>
-
-<div style="background: #0B0B0B; padding: 30px 26px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 18px; color: #0078D6">04</span>
-<h3 style="margin: 0; font-size: 21px; font-weight: 500">מימון בהתאמה אישית</h3>
-<p style="margin: 0; font-size: 16px; font-weight: 300; line-height: 1.65; color: #B5B5B5">אפשרויות מימון שמותאמות לכם.</p>
-</div>
-
-<div style="background: #0B0B0B; padding: 30px 26px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 18px; color: #0078D6">05</span>
-<h3 style="margin: 0; font-size: 21px; font-weight: 500">מסלולי אחריות</h3>
-<p style="margin: 0; font-size: 16px; font-weight: 300; line-height: 1.65; color: #B5B5B5">שקט נפשי גם אחרי הרכישה, ושירות מקצועי לאורך כל התהליך.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="about" style="background: #000000; border-top: 1px solid #1F1F1F">
-<div style="max-width: 1280px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-weight: 400; font-size: 46px">אודות ARJ Motors</h2>
-<p style="margin: 0; font-size: 18px; font-weight: 300; line-height: 1.8; color: #D0D0D0">ARJ Motors מתמחה במכירה, טרייד-אין וייבוא של רכבי יוקרה ורכבים יד שנייה איכותיים, עם דגש על רכבים בעלי נתונים טובים, היסטוריה מסודרת וסטנדרט גבוה.</p>
-<p style="margin: 0; font-size: 18px; font-weight: 300; line-height: 1.8; color: #D0D0D0">אנו מציעים מגוון רחב של רכבים, אפשרויות מימון בהתאמה אישית, מסלולי אחריות, ושירות מקצועי לאורך כל תהליך הרכישה.</p>
-<p style="margin: 6px 0 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 24px; color: #FFFFFF">ARJ Motors – הרכב הנכון, השירות הנכון, במקום אחד.</p>
-</div>
-<div style="flex: 1 1 320px; min-width: 0; display: flex; justify-content: center">
-<div style="border: 1px solid #262626; padding: 40px 56px; display: flex; flex-direction: column; align-items: center; gap: 12px">
-<img src="img/logo.png" alt="לוגו ARJ Motors" style="height: 200px; width: auto">
-</div>
-</div>
-</div>
-</section>
-
-<section id="branches" style="background: #0B0B0B; border-top: 1px solid #1F1F1F">
-<div style="max-width: 1280px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-weight: 400; font-size: 46px">הסניפים שלנו</h2>
-<p style="margin: 0; font-size: 17px; font-weight: 300; color: #A8A8A8">לרשות לקוחותינו עומדים 3 סניפים</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px">
-
-<div style="border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 30px; font-weight: 500">חולון</h3>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; color: #D0D0D0">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-<span>הבנאי 32, חולון</span>
-</div>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: #B5B5B5; line-height: 1.7">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-<span style="white-space: pre-line">א׳–ה׳ 9:30–18:00
-ו׳ 9:30–13:00
-שבת סגור</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
-<a href="tel:037788223" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #0078D6; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; min-height: 46px; box-sizing: border-box"><span dir="ltr">03-7788223</span></a>
-<a href="https://waze.com/ul?q=%D7%94%D7%91%D7%A0%D7%90%D7%99%2032%20%D7%97%D7%95%D7%9C%D7%95%D7%9F" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; border: 1px solid #6E6E6E; min-height: 46px; box-sizing: border-box">ניווט ב-Waze</a>
-</div>
-</div>
-
-<div style="border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 30px; font-weight: 500">ירושלים</h3>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; color: #D0D0D0">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-<span>האלוף יקותיאל אדם 1, ירושלים</span>
-</div>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: #B5B5B5; line-height: 1.7">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-<span style="white-space: pre-line">א׳–ה׳ 9:30–18:00
-ו׳–שבת סגור</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
-<a href="tel:025833544" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #0078D6; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; min-height: 46px; box-sizing: border-box"><span dir="ltr">02-5833544</span></a>
-<a href="https://waze.com/ul?q=%D7%99%D7%A7%D7%95%D7%AA%D7%99%D7%90%D7%9C%20%D7%90%D7%93%D7%9D%201%20%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; border: 1px solid #6E6E6E; min-height: 46px; box-sizing: border-box">ניווט ב-Waze</a>
-</div>
-</div>
-
-<div style="border: 1px solid #262626; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-<h3 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-size: 30px; font-weight: 500">ראשון לציון</h3>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; color: #D0D0D0">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-<span>עליית הנוער 8, ראשון לציון</span>
-</div>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: #B5B5B5; line-height: 1.7">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-<span style="white-space: pre-line">א׳–ה׳ 9:30–18:00
-ו׳ 9:30–13:00
-שבת סגור</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
-<a href="tel:036007775" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #0078D6; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; min-height: 46px; box-sizing: border-box"><span dir="ltr">03-6007775</span></a>
-<a href="https://waze.com/ul?q=%D7%A2%D7%9C%D7%99%D7%99%D7%AA%20%D7%94%D7%A0%D7%95%D7%A2%D7%A8%208%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%9C%D7%A6%D7%99%D7%95%D7%9F" style="flex: 1 1 120px; display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 12px 14px; border-radius: 999px; border: 1px solid #6E6E6E; min-height: 46px; box-sizing: border-box">ניווט ב-Waze</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="contact" style="background: #000000; border-top: 1px solid #1F1F1F">
-<div style="max-width: 1280px; margin: 0 auto; padding: 80px 24px; display: flex; flex-wrap: wrap; gap: 48px">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', 'Frank Ruhl Libre', serif; font-weight: 400; font-size: 46px">צרו קשר</h2>
-<p style="margin: 0; font-size: 17px; font-weight: 300; line-height: 1.7; color: #B5B5B5">השאירו פרטים ונחזור אליכם. מחפשים רכב מסוים או רוצים הצעה על הרכב שלכם? נשמח לעזור.</p>
-<a href="https://wa.me/972504497670" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-size: 17px; padding: 10px 0; min-height: 44px">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
-<span>וואטסאפ: <span dir="ltr">050-4497670</span></span></a>
-<a href="mailto:info@arjmotors.com" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-size: 17px; padding: 10px 0; min-height: 44px">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-<span dir="ltr">info@arjmotors.com</span></a>
-</div>
-<form id="lead" style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px">
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #B5B5B5">שם מלא<input type="text" name="name" required autocomplete="name" style="font: inherit; font-size: 16px; color: #FFFFFF; background: transparent; padding: 12px 2px; border: 0; border-bottom: 1px solid #6E6E6E; min-height: 46px; box-sizing: border-box"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #B5B5B5">טלפון<input type="tel" name="phone" required autocomplete="tel" dir="ltr" style="font: inherit; font-size: 16px; color: #FFFFFF; background: transparent; padding: 12px 2px; border: 0; border-bottom: 1px solid #6E6E6E; min-height: 46px; box-sizing: border-box"></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #B5B5B5">סניף<select name="branch" style="font: inherit; font-size: 16px; color: #FFFFFF; background: #000000; padding: 12px 2px; border: 0; border-bottom: 1px solid #6E6E6E; min-height: 46px"><option>חולון</option><option>ירושלים</option><option>ראשון לציון</option></select></label>
-<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #B5B5B5">מה אתם מחפשים?<textarea name="msg" rows="3" style="font: inherit; font-size: 16px; color: #FFFFFF; background: transparent; padding: 12px 2px; border: 0; border-bottom: 1px solid #6E6E6E; resize: vertical"></textarea></label>
-<label style="grid-column: 1 / -1; display: flex; align-items: center; gap: 10px; font-size: 16px; min-height: 44px"><input type="checkbox" name="tradein" style="width: 20px; height: 20px; accent-color: #0078D6">יש לי רכב לטרייד-אין</label>
-<button type="submit" style="grid-column: 1 / -1; font: inherit; font-weight: 500; font-size: 17px; background: #0078D6; color: #FFFFFF; border: 0; border-radius: 999px; padding: 16px; min-height: 52px; cursor: pointer">שלחו פרטים</button>
+<button class="btn light go" type="submit">הצג רכבים</button>
+<div class="chips" id="makes" aria-label="יצרנים"></div>
 </form>
 </div>
 </section>
 
-<footer style="background: #000000; border-top: 1px solid #1F1F1F; color: #8A8A8A">
-<div style="max-width: 1280px; margin: 0 auto; padding: 30px 24px 96px; display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; font-size: 14px">
-<b style="color: #FFFFFF; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; letter-spacing: 4px">ARJ MOTORS</b>
+<section id="stock" class="section">
+<div class="wrap">
+<div class="stock-head">
+<h2 class="title">המלאי שלנו</h2>
+<span class="count" id="count" aria-live="polite"></span>
+</div>
+<div class="grid" id="grid"></div>
+<div class="empty" id="empty" hidden>
+<p id="emptyMsg">המלאי באתר מתעדכן בימים אלה. מחפשים רכב מסוים? כתבו לנו ונמצא לכם אותו.</p>
+<a class="btn primary" href="https://wa.me/972504497670">שלחו לנו וואטסאפ</a>
+</div>
+<div class="more" id="moreWrap" hidden><button class="btn ghost" id="more" type="button">עוד רכבים</button></div>
+</div>
+</section>
+
+<section class="pro-band" id="pro" aria-label="ARJ PRO">
+<img src="img/arj-pro.jpg" alt="ARJ PRO – עד 80,000 ק״מ, יד ראשונה מבעלות פרטית, אחריות 3 חודשים" width="1983" height="793">
+<p>הרכבים הנבחרים שלנו – בנתונים הכי טובים.</p>
+</section>
+
+<section id="about" class="section alt">
+<div class="wrap about">
+<div class="txt">
+<h2 class="title">אודות</h2>
+<p class="lead">מאז 1986 אנחנו חיים רכב.</p>
+<p>לאורך השנים למדנו שקניית רכב היא הרבה יותר מעסקה – זו החלטה שמלווה אתכם שנים. לכן כל רכב שנכנס אלינו עומד בסטנדרט גבוה, וכל לקוח מקבל שירות אישי וקשוב – מהשיחה הראשונה ועד הרבה אחרי מסירת המפתח.</p>
+<p>מסלולי אחריות שנותנים שקט נפשי, ומימון שמתאים לכל כיס – כדי שהרכב הנכון יהיה בהישג יד.</p>
+<div class="sig" dir="ltr">YOUR RIGHT CHOICE</div>
+</div>
+<div class="tiles">
+<div class="tile"><span class="n en">01</span><b>מכירת רכבים</b><span>רכבי יוקרה ויד שנייה איכותיים, עם נתונים טובים והיסטוריה מסודרת.</span></div>
+<div class="tile"><span class="n en">02</span><b>טרייד-אין</b><span>מביאים את הרכב הנוכחי, מקבלים הערכה והשווי מקוזז מהרכב החדש.</span></div>
+<div class="tile"><span class="n en">03</span><b>ייבוא רכבים</b><span>ייבוא רכבי יוקרה בסטנדרט גבוה, לפי בקשה.</span></div>
+<div class="tile"><span class="n en">04</span><b>אחריות ומימון</b><span>מסלולי אחריות לשקט נפשי, ומימון לכל כיס.</span></div>
+</div>
+</div>
+</section>
+
+<section class="section" aria-label="חברות המימון">
+<div class="wrap">
+<div class="partners-t">בשיתוף עם חברות המימון</div>
+<div class="partners">
+<div class="partner">מימון בקליק</div>
+<div class="partner">מימון ישיר</div>
+<div class="partner">פמה</div>
+<div class="partner">כאל</div>
+<div class="partner">מקס</div>
+</div>
+</div>
+</section>
+
+<section id="branches" class="section alt">
+<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+<h2 class="title">הסניפים שלנו</h2>
+<div class="branches">
+
+<div class="branch">
+<h3>חולון</h3>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>הבנאי 32, חולון</span></div>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span style="white-space:pre-line">א׳–ה׳ 9:30–18:00
+ו׳ 9:30–13:00
+שבת סגור</span></div>
+<div class="acts"><a class="btn primary" href="tel:037788223"><span dir="ltr">03-7788223</span></a><a class="btn ghost" href="https://waze.com/ul?q=%D7%94%D7%91%D7%A0%D7%90%D7%99%2032%20%D7%97%D7%95%D7%9C%D7%95%D7%9F">ניווט ב-Waze</a></div>
+</div>
+
+<div class="branch">
+<h3>ירושלים</h3>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>האלוף יקותיאל אדם 1, ירושלים</span></div>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span style="white-space:pre-line">א׳–ה׳ 9:30–18:00
+ו׳–שבת סגור</span></div>
+<div class="acts"><a class="btn primary" href="tel:025833544"><span dir="ltr">02-5833544</span></a><a class="btn ghost" href="https://waze.com/ul?q=%D7%99%D7%A7%D7%95%D7%AA%D7%99%D7%90%D7%9C%20%D7%90%D7%93%D7%9D%201%20%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D">ניווט ב-Waze</a></div>
+</div>
+
+<div class="branch">
+<h3>ראשון לציון</h3>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>עליית הנוער 8, ראשון לציון</span></div>
+<div class="ln"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span style="white-space:pre-line">א׳–ה׳ 9:30–18:00
+ו׳ 9:30–13:00
+שבת סגור</span></div>
+<div class="acts"><a class="btn primary" href="tel:036007775"><span dir="ltr">03-6007775</span></a><a class="btn ghost" href="https://waze.com/ul?q=%D7%A2%D7%9C%D7%99%D7%99%D7%AA%20%D7%94%D7%A0%D7%95%D7%A2%D7%A8%208%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%9C%D7%A6%D7%99%D7%95%D7%9F">ניווט ב-Waze</a></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="wrap contact">
+<div class="info">
+<h2 class="title">צרו קשר</h2>
+<p>השאירו פרטים ונחזור אליכם. מחפשים רכב מסוים או רוצים הצעה על הרכב שלכם? נשמח לעזור.</p>
+<a href="https://wa.me/972504497670"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg><span>וואטסאפ: <span dir="ltr">050-4497670</span></span></a>
+<a href="mailto:info@arjmotors.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span dir="ltr">info@arjmotors.com</span></a>
+</div>
+<form id="lead">
+<label>שם מלא<input type="text" name="name" required autocomplete="name"></label>
+<label>טלפון<input type="tel" name="phone" required autocomplete="tel" dir="ltr"></label>
+<label class="full">סניף<select name="branch"><option>חולון</option><option>ירושלים</option><option>ראשון לציון</option></select></label>
+<label class="full">מה אתם מחפשים?<textarea name="msg" rows="3"></textarea></label>
+<label class="full chk"><input type="checkbox" name="tradein">יש לי רכב לטרייד-אין</label>
+<button class="btn primary full" type="submit">שלחו פרטים</button>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<b>ARJ MOTORS</b>
 <span>איי.אר.ג'יי מוטורס</span>
-<span style="flex: 1"></span>
+<span class="en" style="letter-spacing:.2em">YOUR RIGHT CHOICE</span>
+<span style="flex:1"></span>
 <span dir="ltr">arjmotors.com</span>
 </div>
 </footer>
 
-<a href="https://wa.me/972504497670" aria-label="שלחו לנו וואטסאפ" style="position: fixed; left: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.5); z-index: 5">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c.3 1.6 1.9 3.3 3.6 3.9l1.2-1.1 1.7.8-.4 1.6c-2.8.2-6.4-3.2-6.3-6l1.6-.4.8 1.7z"/></svg>
+<a class="wa-float" href="https://wa.me/972504497670" aria-label="שלחו לנו וואטסאפ">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c.3 1.6 1.9 3.3 3.6 3.9l1.2-1.1 1.7.8-.4 1.6c-2.8.2-6.4-3.2-6.3-6l1.6-.4.8 1.7z"/></svg>
 </a>
 
-</div>
 <script>
-document.getElementById('lead').addEventListener('submit',function(e){e.preventDefault();var f=e.target;
-var t='שלום, הגעתי מהאתר.\nשם: '+f.name.value+'\nטלפון: '+f.phone.value+'\nסניף: '+f.branch.value+(f.msg.value?'\nמחפש/ת: '+f.msg.value:'')+(f.tradein.checked?'\nיש לי רכב לטרייד-אין':'');
-window.open('https://wa.me/972504497670?text='+encodeURIComponent(t),'_blank');});
+/* ===== Stock =====
+   The site shows only cars marked "פרסום באתר" in the ARJ system.
+   Until that connection is built (in the system build chat), the list comes from stock.json
+   (empty = the page shows the "updating" message). Each car:
+   {make, model, trim, year, km, hand, branch, price (number or null = no price shown),
+    photos:[urls], illus:true when the photo is the maker's image, pro:true for ARJ PRO} */
+var STOCK_URL = 'stock.json';
+var WA = '972504497670';
+var PAGE = 12;
+var all = [], shown = PAGE, activeMake = '';
+
+var grid = document.getElementById('grid'), empty = document.getElementById('empty'),
+    count = document.getElementById('count'), moreWrap = document.getElementById('moreWrap'),
+    makesEl = document.getElementById('makes'), q = document.getElementById('q'), maxp = document.getElementById('maxp');
+
+function fmt(n){ return Number(n).toLocaleString('en-US'); }
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+var carSvg = '<svg width="140" height="56" viewBox="0 0 140 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40h124M14 40l8-14c4-6 10-9 18-10l22-2c10 0 18 4 26 10l14 2c8 1 14 6 16 14"/><circle cx="38" cy="42" r="8"/><circle cx="104" cy="42" r="8"/></svg>';
+
+function filtered(){
+  var t = q.value.trim().toLowerCase(), m = Number(maxp.value) || 0;
+  return all.filter(function(c){
+    if (activeMake && c.make !== activeMake) return false;
+    if (m && !(c.price && c.price <= m)) return false;
+    if (t){
+      var hay = [c.make, c.model, c.trim, c.year].join(' ').toLowerCase();
+      if (t.split(/\s+/).some(function(w){ return hay.indexOf(w) < 0; })) return false;
+    }
+    return true;
+  });
+}
+
+function card(c){
+  var title = [c.make, c.model].filter(Boolean).join(' ');
+  var specs = [c.year, c.km != null ? fmt(c.km) + ' ק״מ' : '', c.hand ? 'יד ' + c.hand : '', c.branch].filter(Boolean).join(' · ');
+  var photo = c.photos && c.photos[0]
+    ? '<img src="' + esc(c.photos[0]) + '" alt="' + esc(title + ' ' + (c.year || '')) + '" loading="lazy">'
+    : carSvg;
+  var wa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent('שלום, הגעתי מהאתר. אני מתעניין/ת ב-' + title + ' ' + (c.year || ''));
+  var right = c.price
+    ? '<span class="price">₪ ' + fmt(c.price) + '</span>'
+    : '<a class="ask" href="' + wa + '">לפרטים</a>';
+  return '<article class="car"><a href="' + wa + '" class="ph" aria-label="' + esc(title) + ' – לפרטים">' + photo +
+    (c.illus ? '<span class="badge illus">תמונה להמחשה</span>' : '') +
+    (c.pro ? '<span class="badge pro" dir="ltr">ARJ<i></i>PRO</span>' : '') +
+    '</a><div class="meta"><div><div class="name" dir="ltr">' + esc(title) + '</div><div class="specs">' + esc(specs) + '</div></div>' + right + '</div></article>';
+}
+
+function render(){
+  var list = filtered();
+  if (!all.length){
+    grid.innerHTML = ''; empty.hidden = false; moreWrap.hidden = true; count.textContent = ''; return;
+  }
+  if (!list.length){
+    grid.innerHTML = ''; empty.hidden = false; moreWrap.hidden = true;
+    document.getElementById('emptyMsg').textContent = 'לא מצאנו רכב שמתאים לחיפוש. כתבו לנו מה אתם מחפשים ונמצא לכם אותו.';
+    count.textContent = '0 רכבים'; return;
+  }
+  empty.hidden = true;
+  grid.innerHTML = list.slice(0, shown).map(card).join('');
+  moreWrap.hidden = list.length <= shown;
+  count.textContent = list.length + ' רכבים';
+}
+
+function buildMakes(){
+  var counts = {};
+  all.forEach(function(c){ if (c.make) counts[c.make] = (counts[c.make] || 0) + 1; });
+  var makes = Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).slice(0, 8);
+  makesEl.innerHTML = makes.map(function(m){ return '<button type="button" class="chip" aria-pressed="false" data-make="' + esc(m) + '">' + esc(m) + '</button>'; }).join('');
+  makesEl.hidden = !makes.length;
+}
+
+makesEl.addEventListener('click', function(e){
+  var b = e.target.closest('.chip'); if (!b) return;
+  activeMake = activeMake === b.dataset.make ? '' : b.dataset.make;
+  Array.prototype.forEach.call(makesEl.children, function(x){ x.setAttribute('aria-pressed', x.dataset.make === activeMake ? 'true' : 'false'); });
+  shown = PAGE; render();
+});
+document.getElementById('search').addEventListener('submit', function(e){
+  e.preventDefault(); shown = PAGE; render();
+  document.getElementById('stock').scrollIntoView({behavior: 'smooth'});
+});
+q.addEventListener('input', function(){ shown = PAGE; render(); });
+maxp.addEventListener('change', function(){ shown = PAGE; render(); });
+document.getElementById('more').addEventListener('click', function(){ shown += PAGE; render(); });
+
+fetch(STOCK_URL, {cache: 'no-store'})
+  .then(function(r){ return r.ok ? r.json() : []; })
+  .catch(function(){ return []; })
+  .then(function(d){ all = Array.isArray(d) ? d : []; buildMakes(); render(); });
+
+/* tabs: mark the section in view */
+var tabLinks = document.querySelectorAll('nav.tabs a');
+function markTab(){
+  var ids = ['stock', 'about', 'branches', 'contact'], cur = 'stock';
+  ids.forEach(function(id){ var el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 160) cur = id; });
+  tabLinks.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
+}
+window.addEventListener('scroll', markTab, {passive: true});
+
+/* contact form → WhatsApp (as before) */
+document.getElementById('lead').addEventListener('submit', function(e){
+  e.preventDefault(); var f = e.target;
+  var t = 'שלום, הגעתי מהאתר.\nשם: ' + f.name.value + '\nטלפון: ' + f.phone.value + '\nסניף: ' + f.branch.value + (f.msg.value ? '\nמחפש/ת: ' + f.msg.value : '') + (f.tradein.checked ? '\nיש לי רכב לטרייד-אין' : '');
+  window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(t), '_blank');
+});
 </script>
 </body>
 </html>

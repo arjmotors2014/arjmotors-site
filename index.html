@@ -81,8 +81,10 @@ nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
 @keyframes drift2{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-10%,-4%) scale(.95)}}
 @media (prefers-reduced-motion:reduce){.hero .smoke i{animation:none}}
 .hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:56px 24px 40px}
-.hero .bg{position:absolute;inset:0;background:url(img/hero-bg.jpg) center 62%/cover no-repeat;opacity:.62;pointer-events:none}
+.hero .bg{position:absolute;inset:0;background:url(img/hero-bg.jpg) center 62%/cover no-repeat;opacity:.5;pointer-events:none}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 30%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.75) 82%,#000 100%),radial-gradient(ellipse 80% 60% at 50% 55%,transparent 40%,rgba(0,0,0,.55) 100%)}
+.hero .wm{position:absolute;left:5%;top:9%;height:min(82%,640px);width:auto;opacity:.13;pointer-events:none}
+@media (max-width:899px){.hero .wm{left:-14%;top:8%;height:330px;opacity:.12}}
 .hero .car-gap{height:clamp(150px,24vw,300px)}
 @media (min-width:900px){.hero .bg{background-position:center 58%}}
 @media (max-width:899px){.hero .bg{background-size:108% auto;background-position:center 44px}.hero .car-gap{height:170px}}
@@ -278,6 +280,7 @@ footer .f-bottom a{color:#8a8a8a;text-decoration:none}
 
 <section class="hero">
 <div class="bg" aria-hidden="true"></div>
+<img class="wm" src="img/emblem-fade.png" alt="" aria-hidden="true">
 <div class="inner">
 <img class="logo" src="img/logo.png" alt="לוגו ARJ Motors">
 <div class="slogan-en" dir="ltr">YOUR RIGHT CHOICE</div>

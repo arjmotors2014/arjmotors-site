@@ -151,9 +151,12 @@ nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
 
 /* partners */
 .partners-t{font-size:12px;letter-spacing:.2em;color:var(--muted);text-align:center;margin-bottom:18px}
-.partners{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.partner{min-height:64px;border:1px solid var(--line-2);border-radius:10px;display:flex;align-items:center;justify-content:center;padding:10px;font-size:15px;color:#d0d0d0;text-align:center}
-@media (max-width:700px){.partners{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.partners{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px 56px}
+.partner{display:flex;align-items:center;justify-content:center;height:52px}
+.partner img{height:100%;width:auto;max-width:150px;object-fit:contain;opacity:.72;transition:opacity .2s}
+.partner img:hover{opacity:1}
+.partner.wide img{height:70%}
+@media (max-width:700px){.partners{gap:24px 34px}.partner{height:40px}.partner img{max-width:110px}}
 
 /* branches */
 .branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
@@ -300,11 +303,11 @@ footer .f-bottom a{color:#8a8a8a;text-decoration:none}
 <div class="wrap">
 <div class="partners-t">בשיתוף עם חברות המימון</div>
 <div class="partners">
-<div class="partner">מימון בקליק</div>
-<div class="partner">מימון ישיר</div>
-<div class="partner">פמה</div>
-<div class="partner">כאל</div>
-<div class="partner">מקס</div>
+<div class="partner"><img src="img/partners/klik.png" alt="מימון בקליק" loading="lazy"></div>
+<div class="partner"><img src="img/partners/yashar.png" alt="מימון ישיר" loading="lazy"></div>
+<div class="partner"><img src="img/partners/pama.png" alt="פמה – מימון לרכב" loading="lazy"></div>
+<div class="partner wide"><img src="img/partners/cal.png" alt="כאל" loading="lazy"></div>
+<div class="partner wide"><img src="img/partners/max.png" alt="מקס" loading="lazy"></div>
 </div>
 </div>
 </section>

@@ -338,11 +338,11 @@ footer b{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:
 <script>
 /* ===== Stock =====
    The site shows only cars marked "פרסום באתר" in the ARJ system.
-   Until that connection is built (in the system build chat), the list comes from stock.json
-   (empty = the page shows the "updating" message). Each car:
-   {make, model, trim, year, km, hand, branch, price (number or null = no price shown),
-    photos:[urls], illus:true when the photo is the maker's image, pro:true for ARJ PRO} */
-var STOCK_URL = 'stock.json';
+   Source: the system's server function site-cars (v144) → {ok, cars:[{id, make, model, trim, year, km,
+   hand, color, gear, fuel, origin, price (null = no price shown), pro, photos:[signed urls, 6h]}]}.
+   It returns only cars marked "פרסום באתר" and only site fields. Empty / error = the "updating" message.
+   Optional fields the card also understands: branch, illus (shows "תמונה להמחשה"). */
+var STOCK_URL = 'https://uktmiqcstnvibpwisymp.supabase.co/functions/v1/site-cars';
 var WA = '972504497670';
 var PAGE = 12;
 var all = [], shown = PAGE, activeMake = '';
@@ -423,7 +423,7 @@ document.getElementById('more').addEventListener('click', function(){ shown += P
 fetch(STOCK_URL, {cache: 'no-store'})
   .then(function(r){ return r.ok ? r.json() : []; })
   .catch(function(){ return []; })
-  .then(function(d){ all = Array.isArray(d) ? d : []; buildMakes(); render(); });
+  .then(function(d){ all = Array.isArray(d) ? d : (d && Array.isArray(d.cars) ? d.cars : []); buildMakes(); render(); });
 
 /* tabs: mark the section in view */
 var tabLinks = document.querySelectorAll('nav.tabs a');

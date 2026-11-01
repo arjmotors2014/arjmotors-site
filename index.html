@@ -81,6 +81,9 @@ nav.tabs a:hover,nav.tabs a.on{color:#fff;border-bottom-color:var(--blue)}
 @keyframes drift2{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-10%,-4%) scale(.95)}}
 @media (prefers-reduced-motion:reduce){.hero .smoke i{animation:none}}
 .hero .inner{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:56px 24px 40px}
+.hero .beam{position:absolute;top:-40px;right:58%;width:2px;height:520px;transform:rotate(48deg);transform-origin:top;background:linear-gradient(180deg,transparent,rgba(92,184,233,.9) 40%,transparent);box-shadow:0 0 22px 6px rgba(0,120,214,.35);pointer-events:none;opacity:.8;z-index:2}
+.hero .beam.b2{right:66%;height:420px;opacity:.35}
+@media (max-width:700px){.hero .beam{right:62%;height:380px}.hero .beam.b2{right:74%;height:300px}}
 .hero-car{position:relative;width:calc(100% + 48px);max-width:900px;margin:-6px -24px -14px;pointer-events:none}
 .hero-car img{width:100%;height:auto}
 .hero-car::after{content:"";position:absolute;inset:-1px;background:linear-gradient(180deg,#000 0%,transparent 24%,transparent 70%,#000 100%),linear-gradient(90deg,#000 0%,transparent 16%,transparent 84%,#000 100%)}
@@ -276,9 +279,10 @@ footer .f-bottom a{color:#8a8a8a;text-decoration:none}
 <main id="top">
 
 <section class="hero">
+<div class="beam" aria-hidden="true"></div><div class="beam b2" aria-hidden="true"></div>
 <div class="inner">
 <img class="logo" src="img/logo.png" alt="לוגו ARJ Motors">
-<div class="hero-car" aria-hidden="true"><img src="img/hero-car.jpg" alt="" width="1024" height="506" fetchpriority="high"></div>
+<div class="hero-car" aria-hidden="true"><img src="img/hero-car.jpg" alt="" width="860" height="276" fetchpriority="high"></div>
 <div class="slogan-en" dir="ltr">YOUR RIGHT CHOICE</div>
 <div class="rule"></div>
 <h1>הבחירה הנכונה שלך</h1>
